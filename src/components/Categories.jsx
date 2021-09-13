@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import classNames from "classnames";
 
-export const Categories = ({ sushiTypes }) => {
+export const Categories = ({ sushiTypes, selectType }) => {
+  const [isSelected, setSelectedType] = useState(0);
+
+  const handleSelectedType = (index) => {
+    setSelectedType(index);
+  };
+
   return (
     <div className="categories">
       <ul>
-        <li className="active">All</li>
         {sushiTypes &&
-          sushiTypes.map((type, index) => <li key={index + type}>{type}</li>)}
+          sushiTypes.map((type, index) => (
+            <li
+              className={classNames({ active: isSelected === index })}
+              onClick={() => handleSelectedType(index)}
+              key={index + type}
+            >
+              {type}
+            </li>
+          ))}
       </ul>
-    </div>
+    </div> 
   );
 };
