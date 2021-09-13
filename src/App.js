@@ -1,5 +1,6 @@
-import { Categories } from './components/Categories';
-import { Header } from './components/Header'
+import { Header, Categories } from "./components";
+
+const sushiTypes = ["Nigiri", "Gunkan", "Maki", "Grand Maki", "Futo Maki"];
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <div className="content">
         <div className="container">
           <div className="content__top">
-            <Categories />
+            <Categories sushiTypes={sushiTypes} />
             <div className="sort">
               <div className="sort__label">
                 <svg
@@ -23,14 +24,14 @@ function App() {
                     fill="#2C2C2C"
                   />
                 </svg>
-                <b>Сортировка по:</b>
-                <span>популярности</span>
+                <b>Sort by:</b>
+                <span>popularity</span>
               </div>
               <div className="sort__popup">
                 <ul>
-                  <li className="active">популярности</li>
-                  <li>цене</li>
-                  <li>алфавиту</li>
+                  <li className="active">popular</li>
+                  <li>price</li>
+                  <li>alphabetically</li>
                 </ul>
               </div>
             </div>
