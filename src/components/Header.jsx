@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./asserts/img/sushi-logo.svg";
+import logo from "../asserts/img/sushi-logo.svg";
 import { Button } from "./Button";
 
 export const Header = () => {
