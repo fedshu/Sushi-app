@@ -1,15 +1,12 @@
 import React from "react";
 
-export const Categories = () => {
+export const Categories = ({ sushiTypes }) => {
   return (
     <div className="categories">
       <ul>
-        <li className="active">Все</li>
-        <li>Мясные</li>
-        <li>Вегетарианская</li>
-        <li>Гриль</li>
-        <li>Острые</li>
-        <li>Закрытые</li>
+        <li className="active">All</li>
+        {sushiTypes &&
+          sushiTypes.map((type, index) => <li key={index + type}>{type}</li>)}
       </ul>
     </div>
   );
