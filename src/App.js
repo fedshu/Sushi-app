@@ -1,6 +1,14 @@
 import { Header, Categories } from "./components";
 
-const sushiTypes = ["Nigiri", "Gunkan", "Maki", "Grand Maki", "Futo Maki"];
+const sushiTypes = [
+  "All",
+  "Nigiri",
+  "Gunkan",
+  "Maki",
+  "Grand Maki",
+  "Futo Maki",
+];
+
 
 function App() {
   return (
