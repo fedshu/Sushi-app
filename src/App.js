@@ -9,7 +9,6 @@ const sushiTypes = [
   "Futo Maki",
 ];
 
-
 function App() {
   return (
     <div className="wrapper">

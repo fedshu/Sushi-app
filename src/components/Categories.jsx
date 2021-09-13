@@ -11,17 +11,16 @@ export const Categories = ({ sushiTypes, selectType }) => {
   return (
     <div className="categories">
       <ul>
-        {sushiTypes &&
-          sushiTypes.map((type, index) => (
-            <li
-              className={classNames({ active: isSelected === index })}
-              onClick={() => handleSelectedType(index)}
-              key={index + type}
-            >
-              {type}
-            </li>
-          ))}
+        {sushiTypes?.map((type, index) => (
+          <li
+            className={classNames({ active: isSelected === index })}
+            onClick={() => handleSelectedType(index)}
+            key={index + type}
+          >
+            {type}
+          </li>
+        ))}
       </ul>
-    </div> 
+    </div>
   );
 };
