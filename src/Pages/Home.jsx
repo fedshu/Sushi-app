@@ -3,6 +3,10 @@ import { Categories, SortMenu, SushiItem } from "../components";
 
 const sushiTypes = [
   "All",
+  "Yaki maki",
+  "Futomaki",
+  "Maki",
+  "Grand maki",
   "Nigiri",
   "Gunkan",
   "Maki",
