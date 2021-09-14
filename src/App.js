@@ -9,6 +9,8 @@ const sushiTypes = [
   "Futo Maki",
 ];
 
+const sortTypes = ["popular", "price", "alphabetically"];
+
 function App() {
   return (
     <div className="wrapper">
@@ -17,7 +19,7 @@ function App() {
         <div className="container">
           <div className="content__top">
             <Categories sushiTypes={sushiTypes} />
-            <SortMenu/>
+            <SortMenu sortTypes={sortTypes} />
           </div>
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
