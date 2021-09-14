@@ -20,9 +20,11 @@ export const Home = ({ sushi }) => {
         <Categories sushiTypes={sushiTypes} />
         <SortMenu sortTypes={sortTypes} />
       </div>
-      <h2 className="content__title">Все пиццы</h2>
+      <h2 className="content__title">All sushi</h2>
       <div className="content__items">
-        <SushiItem />
+        {sushi?.map((item) => (
+          <SushiItem key={item.id} {...item} />
+        ))}
       </div>
     </div>
   );
