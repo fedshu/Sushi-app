@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 
 export const SortMenu = () => {
+  const [isOpenMenu, toggleOpenMenu] = useState(false);
+  const sortElement = useRef()
   return (
     <div className="sort">
       <div className="sort__label">
