@@ -1,12 +1,15 @@
 import { Header } from "./components";
-import { Home } from "./Pages/Home";
+import { Home, Card } from "./Pages";
+import { Route } from "react-router-dom";
+
 
 function App() {
   return (
     <div className="wrapper">
       <Header />
       <div className="content">
-        <Home/>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/card" component={Card}/>
       </div>
     </div>
   );
