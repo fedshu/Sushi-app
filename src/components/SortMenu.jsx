@@ -4,12 +4,12 @@ import classNames from "classnames";
 export const SortMenu = ({ sortTypes }) => {
   const [isOpenMenu, toggleOpenMenu] = useState(false);
   const [sortTypeIndex, setSelectedSortType] = useState(0);
-  const [sortTypeName, setCurrentSortType] = useState("popularity");
   const sortElement = useRef();
+
+  const sortTypeName = sortTypes[sortTypeIndex]
 
   const handleSelectSortType = (index) => {
     setSelectedSortType(index);
-    setCurrentSortType(sortTypes[index]);
     handleToggleMenu();
   };
 
@@ -18,7 +18,7 @@ export const SortMenu = ({ sortTypes }) => {
   };
 
   const handleClickOutsideMenu = (e) => {
-    if (!e.path.includes(sortElement.current)) {
+    if (sortElement.current && !sortElement.current.contains(e.target)) {
       toggleOpenMenu(false);
       document.removeEventListener("click", handleClickOutsideMenu);
     }
@@ -32,6 +32,7 @@ export const SortMenu = ({ sortTypes }) => {
     <div ref={sortElement} className="sort">
       <div className="sort__label">
         <svg
+          className={isOpenMenu ? 'rotate' : ''}
           width="10"
           height="6"
           viewBox="0 0 10 6"
