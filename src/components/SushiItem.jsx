@@ -9,8 +9,7 @@ export default function SushiItem({ name, imageUrl, price, sizes }) {
       <h4 className="sushi-block__title">{name}</h4>
       <div className="sushi-block__selector">
         <ul>
-          <li className="active">тонкое</li>
-          <li>традиционное</li>
+          <li className="info">Product Information</li>
         </ul>
         <ul>
           {sizes?.map((size, index) => (
