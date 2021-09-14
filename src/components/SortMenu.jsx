@@ -1,10 +1,35 @@
 import React, { useState, useEffect, useRef } from "react";
+import classNames from "classnames";
 
-export const SortMenu = () => {
+export const SortMenu = ({ sortTypes }) => {
   const [isOpenMenu, toggleOpenMenu] = useState(false);
-  const sortElement = useRef()
+  const [sortTypeIndex, setSelectedSortType] = useState(0);
+  const [sortTypeName, setCurrentSortType] = useState("popularity");
+  const sortElement = useRef();
+
+  const handleSelectSortType = (index) => {
+    setSelectedSortType(index);
+    setCurrentSortType(sortTypes[index]);
+    handleToggleMenu();
+  };
+
+  const handleToggleMenu = () => {
+    toggleOpenMenu(!isOpenMenu);
+  };
+
+  const handleClickOutsideMenu = (e) => {
+    if (!e.path.includes(sortElement.current)) {
+      toggleOpenMenu(false);
+      document.removeEventListener("click", handleClickOutsideMenu);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutsideMenu);
+  }, [isOpenMenu]);
+
   return (
-    <div className="sort">
+    <div ref={sortElement} className="sort">
       <div className="sort__label">
         <svg
           width="10"
