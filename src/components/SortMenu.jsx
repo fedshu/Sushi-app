@@ -19,15 +19,23 @@ export const SortMenu = () => {
           />
         </svg>
         <b>Sort by:</b>
-        <span>popularity</span>
+        <span onClick={handleToggleMenu}>{sortTypeName}</span>
       </div>
-      <div className="sort__popup">
-        <ul>
-          <li className="active">popular</li>
-          <li>price</li>
-          <li>alphabetically</li>
-        </ul>
-      </div>
+      {isOpenMenu && (
+        <div className="sort__popup">
+          <ul>
+            {sortTypes?.map((type, index) => (
+              <li
+                onClick={() => handleSelectSortType(index)}
+                className={classNames({ active: sortTypeIndex === index })}
+                key={index + type}
+              >
+                {type}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
