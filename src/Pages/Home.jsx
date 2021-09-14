@@ -8,10 +8,6 @@ const sushiTypes = [
   "Maki",
   "Grand maki",
   "Nigiri",
-  "Gunkan",
-  "Maki",
-  "Grand Maki",
-  "Futo Maki",
 ];
 
 const sortTypes = ["popular", "price", "alphabetically"];
