@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types'
 
 export default function SushiItem({ name, imageUrl, price, sizes }) {
   const [sushiSizeIndex, setSelectedSize] = useState(0);
@@ -44,4 +45,19 @@ export default function SushiItem({ name, imageUrl, price, sizes }) {
       </div>
     </div>
   );
+}
+
+
+SushiItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.number).isRequired
+}
+
+SushiItem.defaultProps = {
+  name: 'No name',
+  imageUrl: 'No picture',
+  price: 0,
+  sizes: []
 }

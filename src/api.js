@@ -12,7 +12,7 @@ export const api = {
                     "https://sushivesla.by/img/frontend/dishes/nigiri_with_roast_tuna.png",
                   name: "Nigiri with roast tuna",
                   types: [0, 1],
-                  sizes: [1, 4, 8],
+                  sizes: [1, 2, 8],
                   price: 3.99,
                   category: 0,
                   rating: 4,
