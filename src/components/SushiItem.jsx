@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function SushiItem({ name, imageUrl, price, sizes }) {
-  const [sushiTypeIndex, setSelectedSize] = useState(0);
+  const [sushiSizeIndex, setSelectedSize] = useState(0);
 
   return (
     <div className="sushi-block">
@@ -14,7 +14,7 @@ export default function SushiItem({ name, imageUrl, price, sizes }) {
         <ul>
           {sizes?.map((size, index) => (
             <li
-              class={sushiTypeIndex === index ? "active" : ""}
+              className={sushiSizeIndex === index ? "active" : ""}
               onClick={() => setSelectedSize(index)}
               key={index}
             >
