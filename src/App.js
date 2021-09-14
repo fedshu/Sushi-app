@@ -1,5 +1,4 @@
-import { Header, Categories } from "./components";
-import { SortMenu } from "./components/SortMenu";
+import { Header, Categories, SortMenu } from "./components";
 
 const sushiTypes = [
   "All",
