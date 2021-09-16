@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Categories, SortMenu, SushiItem } from "../components";
 
 const sushiTypes = [
@@ -12,8 +13,13 @@ const sushiTypes = [
 
 const sortTypes = ["popular", "price", "alphabetically"];
 
-export const Home = ({ sushi }) => {
-  console.log("sushi", sushi);
+export const Home = () => {
+  const { sushi } = useSelector(({ sushi }) => {
+    return {
+      sushi: sushi.sushiList,
+    };
+  });
+
   return (
     <div className="container">
       <div className="content__top">
