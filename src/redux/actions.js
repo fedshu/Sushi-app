@@ -8,7 +8,7 @@ export const SET_CATEGORY_TYPE = (type) => ({
   payload: type,
 });
 
-export const ADD_SUSHI = (sushi) => ({
+export const GET_SUSHI = (sushi) => ({
   type: "GET_SUSHI",
   payload: sushi,
 });
