@@ -1,7 +1,7 @@
 import { SET_CATEGORY_TYPE, SET_SORT_TYPE } from "../actions";
 
 const initialState = {
-  category: 0,
+  category: 'All',
   sortBy: "popular",
 };
 
