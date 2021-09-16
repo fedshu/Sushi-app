@@ -14,7 +14,7 @@ export const api = {
                   types: [0, 1],
                   sizes: [1, 2, 8],
                   price: 3.99,
-                  category: 0,
+                  category: 'Yaki maki',
                   rating: 4,
                 },
                 {
@@ -25,7 +25,7 @@ export const api = {
                   types: [0],
                   sizes: [4, 8],
                   price: 2.30,
-                  category: 1,
+                  category: 'Yaki maki',
                   rating: 6,
                 },
                 {
@@ -36,7 +36,7 @@ export const api = {
                   types: [0],
                   sizes: [1, 4, 8],
                   price: 14.99,
-                  category: 1,
+                  category: 'Futomaki',
                   rating: 4,
                 },
                 {
@@ -47,7 +47,7 @@ export const api = {
                   types: [1],
                   sizes: [1, 4, 8],
                   price: 9.99,
-                  category: 2,
+                  category: 'Futomaki',
                   rating: 2,
                 },
                 {
@@ -58,7 +58,7 @@ export const api = {
                   types: [0, 1],
                   sizes: [4, 8],
                   price: 6,
-                  category: 3,
+                  category: 'Maki',
                   rating: 8,
                 },
                 {
@@ -69,7 +69,7 @@ export const api = {
                   types: [0],
                   sizes: [1, 4, 8],
                   price: 8.20,
-                  category: 2,
+                  category: 'Maki',
                   rating: 2,
                 },
                 {
@@ -80,7 +80,7 @@ export const api = {
                   types: [0, 1],
                   sizes: [1, 4, 8],
                   price: 2,
-                  category: 1,
+                  category: 'Grand maki',
                   rating: 9,
                 },
                 {
@@ -91,7 +91,7 @@ export const api = {
                   types: [0, 1],
                   sizes: [4, 8, 16],
                   price: 1.50,
-                  category: 4,
+                  category: 'Grand maki',
                   rating: 10,
                 },
                 {
@@ -103,7 +103,7 @@ export const api = {
                   types: [0, 1],
                   sizes: [4, 8, 16],
                   price: 1.20,
-                  category: 5,
+                  category: 'Nigiri',
                   rating: 10,
                 },
                 {
@@ -115,7 +115,7 @@ export const api = {
                   types: [0, 1],
                   sizes: [4, 8],
                   price: 2.10,
-                  category: 5,
+                  category: 'Nigiri',
                   rating: 7,
                 },
               ],
