@@ -1,6 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Categories, SortMenu, SushiItem } from "../components";
+import { setCategoryType } from "../redux/actions";
 
 const sushiTypes = [
   "All",
@@ -14,6 +15,8 @@ const sushiTypes = [
 const sortTypes = ["popular", "price", "alphabetically"];
 
 export const Home = () => {
+  const dispatch = useDispatch();
+
   const handleSelectCategory = (categoryType) => {
     dispatch(setCategoryType(categoryType));
   };
