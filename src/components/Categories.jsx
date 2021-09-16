@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 
-export const Categories = ({ sushiTypes }) => {
+export const Categories = ({ sushiTypes, onSelectCategoryType }) => {
   const [sushiTypeIndex, setSelectedType] = useState(0);
+
+  const handleSelectType = (index) => {
+    setSelectedType(index)
+    onSelectCategoryType(sushiTypes[index])
+  }
 
   return (
     <div className="categories">
@@ -10,7 +15,7 @@ export const Categories = ({ sushiTypes }) => {
         {sushiTypes?.map((type, index) => (
           <li
             className={classNames({ 'active': sushiTypeIndex === index })}
-            onClick={() => setSelectedType(index)}
+            onClick={() => handleSelectType(index)}
             key={index + type}
           >
             {type}
