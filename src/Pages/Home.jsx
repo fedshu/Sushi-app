@@ -14,7 +14,10 @@ const sushiTypes = [
 const sortTypes = ["popular", "price", "alphabetically"];
 
 export const Home = () => {
-  const { sushi } = useSelector(({ sushi }) => {
+  const handleSelectCategory = (categoryType) => {
+    dispatch(setCategoryType(categoryType));
+  };
+  
     return {
       sushi: sushi.sushiList,
     };
@@ -23,7 +26,10 @@ export const Home = () => {
   return (
     <div className="container">
       <div className="content__top">
-        <Categories sushiTypes={sushiTypes} />
+        <Categories
+          sushiTypes={sushiTypes}
+          onSelectCategoryType={handleSelectCategory}
+        />
         <SortMenu sortTypes={sortTypes} />
       </div>
       <h2 className="content__title">All sushi</h2>
