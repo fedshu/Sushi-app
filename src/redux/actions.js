@@ -7,3 +7,8 @@ export const SET_CATEGORY_TYPE = (type) => ({
   type: "SET_CATEGORY_TYPE",
   payload: type,
 });
+
+export const ADD_SUSHI = (sushi) => ({
+  type: "GET_SUSHI",
+  payload: sushi,
+});
