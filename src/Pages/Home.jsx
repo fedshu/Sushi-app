@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Categories, SortMenu, SushiItem, SushiBackgroundLoading } from "../components";
+import {
+  Categories,
+  SortMenu,
+  SushiItem,
+  SushiBackgroundLoading,
+} from "../components";
 import { setCategoryType, getSushi } from "../redux/actions";
 
 const sushiTypes = [
@@ -43,9 +48,11 @@ export const Home = () => {
       </div>
       <h2 className="content__title">All sushi</h2>
       <div className="content__items">
-        {isLoaded ? sushi.map((item) => (
-          <SushiItem key={item.id} {...item} />
-        )) : <SushiBackgroundLoading /> }
+        {isLoaded ? (
+          sushi.map((item) => <SushiItem key={item.id} {...item} />)
+        ) : (
+          <SushiBackgroundLoading />
+        )}
       </div>
     </div>
   );
