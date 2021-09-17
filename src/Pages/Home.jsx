@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Categories, SortMenu, SushiItem } from "../components";
-import { setCategoryType } from "../redux/actions";
+import { setCategoryType, getSushi } from "../redux/actions";
 
 const sushiTypes = [
   "All",
@@ -17,10 +17,15 @@ const sortTypes = ["popular", "price", "alphabetically"];
 export const Home = () => {
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(getSushi());
+  }, []);
+
   const handleSelectCategory = (categoryType) => {
     dispatch(setCategoryType(categoryType));
   };
-  
+
+  const { sushi } = useSelector(({ sushi, filter }) => {
     return {
       sushi: sushi.sushiList,
     };
