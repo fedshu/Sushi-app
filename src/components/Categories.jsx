@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import PropTypes from 'prop-types'
 
-export const Categories = ({ sushiTypes, onSelectCategoryType }) => {
+export default function Categories({ sushiTypes, onSelectCategoryType }) {
   const [sushiTypeIndex, setSelectedType] = useState(0);
 
   const handleSelectType = (index) => {
