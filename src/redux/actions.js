@@ -1,6 +1,9 @@
+import { api } from "../api";
+
 export const SET_SORT_TYPE = "SET_SORT_TYPE";
 export const SET_CATEGORY_TYPE = "SET_CATEGORY_TYPE";
 export const SET_SUSHI = "SET_SUSHI";
+export const GET_SUSHI = "GET_SUSHI";
 
 export const setSortType = (type) => ({
   type: SET_SORT_TYPE,
