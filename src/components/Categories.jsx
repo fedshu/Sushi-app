@@ -25,3 +25,13 @@ export const Categories = ({ sushiTypes, onSelectCategoryType }) => {
     </div>
   );
 };
+
+Categories.propTypes = {
+  onSelectCategoryType: PropTypes.func.isRequired,
+  sushiTypeIndex: PropTypes.number.isRequired,
+  sushiTypes: PropTypes.arrayOf(PropTypes.object).isRequired
+}
+
+Categories.defaultProps = {
+  sushiTypes: []
+}
