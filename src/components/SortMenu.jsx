@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
+import PropTypes from 'prop-types'
 
 export const SortMenu = ({ sortTypes }) => {
   const [isOpenMenu, toggleOpenMenu] = useState(false);
@@ -65,3 +66,12 @@ export const SortMenu = ({ sortTypes }) => {
     </div>
   );
 };
+
+
+SortMenu.propTypes = {
+  sortTypes: PropTypes.arrayOf(PropTypes.string).isRequired
+}
+
+SortMenu.defaultProps = {
+  sortTypes: []
+}
