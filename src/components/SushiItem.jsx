@@ -1,12 +1,19 @@
 import React, { useState } from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 export default function SushiItem({ name, imageUrl, price, sizes }) {
   const [sushiSizeIndex, setSelectedSize] = useState(0);
 
   return (
     <div className="sushi-block">
-      <img className="sushi-block__image" src={imageUrl} alt="Sushi" />
+      <img
+        className="sushi-block__image"
+        width="260"
+        height="260"
+        src={imageUrl}
+        loading="lazy"
+        alt="Sushi"
+      />
       <h4 className="sushi-block__title">{name}</h4>
       <div className="sushi-block__selector">
         <ul>
@@ -47,17 +54,16 @@ export default function SushiItem({ name, imageUrl, price, sizes }) {
   );
 }
 
-
 SushiItem.propTypes = {
   name: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  sizes: PropTypes.arrayOf(PropTypes.number).isRequired
-}
+  sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
 
 SushiItem.defaultProps = {
-  name: 'No name',
-  imageUrl: 'No picture',
+  name: "No name",
+  imageUrl: "No picture",
   price: 0,
-  sizes: []
-}
+  sizes: [],
+};
