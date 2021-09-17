@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-import { setSushi } from "./redux/actions";
-import { api } from "./api";
+import { getSushi } from "./redux/actions";
 import { Home, Card } from "./pages";
 import { Header } from "./components";
 import { useDispatch } from "react-redux";
@@ -10,7 +9,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    api.get("/sushi").then((result) => dispatch(setSushi(result.sushi)));
+    dispatch(getSushi());
   }, []);
 
   return (
