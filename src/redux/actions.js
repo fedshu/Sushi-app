@@ -3,7 +3,7 @@ import { api } from "../api";
 export const SET_SORT_TYPE = "SET_SORT_TYPE";
 export const SET_CATEGORY_TYPE = "SET_CATEGORY_TYPE";
 export const SET_SUSHI = "SET_SUSHI";
-export const GET_SUSHI = "GET_SUSHI";
+export const SET_LOADING = "SET_LOADING";
 
 export const setSortType = (type) => ({
   type: SET_SORT_TYPE,
@@ -20,6 +20,12 @@ export const setSushi = (sushi) => ({
   payload: sushi,
 });
 
-export const getSushi = () => (dispatch) => {
-  api.get("/sushi").then((result) => dispatch(setSushi(result.sushi)));
-};
+export const setLoading = () => ({ type: SET_LOADING });
+
+export const getSushi =
+  (type = "all") =>
+  (dispatch) => {
+    api
+      .get(`/sushi/${type}`)
+      .then((result) => dispatch(setSushi(result.sushi)));
+  };

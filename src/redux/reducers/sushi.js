@@ -1,8 +1,8 @@
-import { SET_SUSHI } from "../actions";
+import { SET_SUSHI, SET_LOADING } from "../actions";
 
 const initialState = {
   sushiList: [],
-  isLoaded: false
+  isLoaded: false,
 };
 
 export const sushi = (state = initialState, action) => {
@@ -11,7 +11,12 @@ export const sushi = (state = initialState, action) => {
       return {
         ...state,
         sushiList: action.payload,
-        isLoaded: true
+        isLoaded: true,
+      };
+    }
+    case SET_LOADING: {
+      return {
+        isLoaded: false,
       };
     }
     default:
