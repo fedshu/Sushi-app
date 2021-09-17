@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Categories, SortMenu, SushiItem } from "../components";
+import { Categories, SortMenu, SushiItem, SushiBackgroundLoading } from "../components";
 import { setCategoryType, getSushi } from "../redux/actions";
 
 const sushiTypes = [
@@ -25,9 +25,10 @@ export const Home = () => {
     dispatch(setCategoryType(categoryType));
   };
 
-  const { sushi } = useSelector(({ sushi, filter }) => {
+  const { sushi, isLoaded } = useSelector(({ sushi }) => {
     return {
       sushi: sushi.sushiList,
+      isLoaded: sushi.isLoaded,
     };
   });
 
@@ -42,9 +43,9 @@ export const Home = () => {
       </div>
       <h2 className="content__title">All sushi</h2>
       <div className="content__items">
-        {sushi?.map((item) => (
+        {isLoaded ? sushi.map((item) => (
           <SushiItem key={item.id} {...item} />
-        ))}
+        )) : <SushiBackgroundLoading /> }
       </div>
     </div>
   );
