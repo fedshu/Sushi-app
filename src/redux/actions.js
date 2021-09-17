@@ -16,3 +16,7 @@ export const setSushi = (sushi) => ({
   type: SET_SUSHI,
   payload: sushi,
 });
+
+export const getSushi = () => (dispatch) => {
+  api.get("/sushi").then((result) => dispatch(setSushi(result.sushi)));
+};
