@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { setLoading, getSushi } from "../redux/actions";
 import {
   Categories,
   SortMenu,
@@ -27,7 +28,8 @@ export const Home = () => {
   }, []);
 
   const handleSelectCategory = (categoryType) => {
-    dispatch(setCategoryType(categoryType));
+    dispatch(setLoading())
+    dispatch(getSushi(categoryType));
   };
 
   const { sushi, isLoaded } = useSelector(({ sushi }) => {
