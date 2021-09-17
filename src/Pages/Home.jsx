@@ -7,15 +7,14 @@ import {
   SushiItem,
   SushiBackgroundLoading,
 } from "../components";
-import { setCategoryType, getSushi } from "../redux/actions";
 
 const sushiTypes = [
-  "All",
-  "Yaki maki",
-  "Futomaki",
-  "Maki",
-  "Grand maki",
-  "Nigiri",
+  {label:"All", apiName: 'all'},
+  {label:"Yaki maki", apiName: 'yaki-maki'},
+  {label:"Futomaki", apiName: 'futomaki'},
+  {label:"Maki", apiName: 'maki'},
+  {label:"Grand maki", apiName: 'grand-maki'},
+  {label:"Nigiri", apiName: 'nigiri'},
 ];
 
 const sortTypes = ["popular", "price", "alphabetically"];

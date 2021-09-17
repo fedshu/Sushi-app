@@ -6,7 +6,7 @@ export const Categories = ({ sushiTypes, onSelectCategoryType }) => {
 
   const handleSelectType = (index) => {
     setSelectedType(index)
-    onSelectCategoryType(sushiTypes[index])
+    onSelectCategoryType(sushiTypes[index].apiName)
   }
 
   return (
@@ -16,9 +16,9 @@ export const Categories = ({ sushiTypes, onSelectCategoryType }) => {
           <li
             className={classNames({ 'active': sushiTypeIndex === index })}
             onClick={() => handleSelectType(index)}
-            key={index + type}
+            key={index + type.label}
           >
-            {type}
+            {type.label}
           </li>
         ))}
       </ul>
