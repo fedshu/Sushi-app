@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
 import PropTypes from 'prop-types'
 
-export const SortMenu = ({ sortTypes }) => {
+export const SortMenu = ({ sortTypes, onSelectSortType }) => {
   const [isOpenMenu, toggleOpenMenu] = useState(false);
   const [sortTypeIndex, setSelectedSortType] = useState(0);
   const sortElement = useRef();
@@ -11,6 +11,7 @@ export const SortMenu = ({ sortTypes }) => {
 
   const handleSelectSortType = (index) => {
     setSelectedSortType(index);
+    onSelectSortType(sortTypes[index])
     handleToggleMenu();
   };
 
@@ -69,7 +70,8 @@ export const SortMenu = ({ sortTypes }) => {
 
 
 SortMenu.propTypes = {
-  sortTypes: PropTypes.arrayOf(PropTypes.string).isRequired
+  sortTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onSelectSortType: PropTypes.func.isRequired
 }
 
 SortMenu.defaultProps = {
