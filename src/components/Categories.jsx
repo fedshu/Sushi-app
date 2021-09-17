@@ -29,7 +29,6 @@ export default function Categories({ sushiTypes, onSelectCategoryType }) {
 
 Categories.propTypes = {
   onSelectCategoryType: PropTypes.func.isRequired,
-  sushiTypeIndex: PropTypes.number.isRequired,
   sushiTypes: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
