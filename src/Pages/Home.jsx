@@ -48,11 +48,9 @@ export const Home = () => {
       </div>
       <h2 className="content__title">All sushi</h2>
       <div className="content__items">
-        {isLoaded ? (
-          sushi.map((item) => <SushiItem key={item.id} {...item} />)
-        ) : (
-          <SushiBackgroundLoading />
-        )}
+        {isLoaded
+          ? sushi.map((item) => <SushiItem key={item.id} {...item} />)
+          : Array(8).fill(<SushiBackgroundLoading />)}
       </div>
     </div>
   );
