@@ -50,7 +50,7 @@ export const Home = () => {
       <div className="content__items">
         {isLoaded
           ? sushi.map((item) => <SushiItem key={item.id} {...item} />)
-          : Array(8).fill(<SushiBackgroundLoading />)}
+          : Array(8).fill(0).map((item, index) => <SushiBackgroundLoading key={index + 1}/>)}
       </div>
     </div>
   );
