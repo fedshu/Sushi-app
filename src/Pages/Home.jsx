@@ -27,8 +27,14 @@ export const Home = () => {
   }, []);
 
   const handleSelectCategory = (categoryType) => {
-    dispatch(setLoading())
+    dispatch(setLoading());
     dispatch(getSushi(categoryType));
+  };
+
+  const handleSelectSort = (sortType) => {
+    console.log("sortType", sortType);
+    // dispatch(setLoading());
+    // dispatch(getSushi(categoryType));
   };
 
   const { sushi, isLoaded } = useSelector(({ sushi }) => {
@@ -45,13 +51,18 @@ export const Home = () => {
           sushiTypes={sushiTypes}
           onSelectCategoryType={handleSelectCategory}
         />
-        <SortMenu sortTypes={sortTypes} />
+        <SortMenu
+          sortTypes={sortTypes}
+          onSelectSortType={handleSelectSort}
+        />
       </div>
       <h2 className="content__title">All sushi</h2>
       <div className="content__items">
         {isLoaded
           ? sushi.map((item) => <SushiItem key={item.id} {...item} />)
-          : Array(8).fill(0).map((item, index) => <SushiBackgroundLoading key={index + 1}/>)}
+          : Array(8)
+              .fill(0)
+              .map((item, index) => <SushiBackgroundLoading key={index + 1} />)}
       </div>
     </div>
   );
