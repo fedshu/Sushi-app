@@ -151,7 +151,7 @@ export const api = {
                 },
               ],
             });
-          }, 1000);
+          }, 500);
         });
       case "/sushi/futomaki":
         return new Promise((resolve, reject) => {
@@ -182,7 +182,7 @@ export const api = {
                 }
               ],
             });
-          }, 1000);
+          }, 500);
         });
       case "/sushi/maki":
         return new Promise((resolve, reject) => {
@@ -213,7 +213,7 @@ export const api = {
                 }
               ],
             });
-          }, 1000);
+          }, 500);
         });
       case "/sushi/grand-maki":
         return new Promise((resolve, reject) => {
@@ -244,7 +244,7 @@ export const api = {
                 }
               ],
             });
-          }, 1000);
+          }, 500);
         });
       case "/sushi/nigiri":
         return new Promise((resolve, reject) => {
@@ -277,7 +277,7 @@ export const api = {
                 }
               ],
             });
-          }, 1000);
+          }, 500);
         });
       default:
         throw new Error("Unknown adress");
