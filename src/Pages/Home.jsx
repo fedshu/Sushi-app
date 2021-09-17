@@ -9,12 +9,12 @@ import {
 } from "../components";
 
 const sushiTypes = [
-  {label:"All", apiName: 'all'},
-  {label:"Yaki maki", apiName: 'yaki-maki'},
-  {label:"Futomaki", apiName: 'futomaki'},
-  {label:"Maki", apiName: 'maki'},
-  {label:"Grand maki", apiName: 'grand-maki'},
-  {label:"Nigiri", apiName: 'nigiri'},
+  { label: "All", apiName: "all" },
+  { label: "Yaki maki", apiName: "yaki-maki" },
+  { label: "Futomaki", apiName: "futomaki" },
+  { label: "Maki", apiName: "maki" },
+  { label: "Grand maki", apiName: "grand-maki" },
+  { label: "Nigiri", apiName: "nigiri" },
 ];
 
 const sortTypes = ["popular", "price", "alphabetically"];
