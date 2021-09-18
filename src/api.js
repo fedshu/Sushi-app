@@ -59,7 +59,7 @@ export const api = {
                   sizes: [4, 8],
                   price: 6,
                   category: "Maki",
-                  rating: 8,
+                  rating: 9,
                 },
                 {
                   id: 5,
@@ -92,7 +92,7 @@ export const api = {
                   sizes: [4, 8, 16],
                   price: 1.5,
                   category: "Grand maki",
-                  rating: 10,
+                  rating: 8,
                 },
                 {
                   id: 8,
@@ -104,7 +104,7 @@ export const api = {
                   sizes: [4, 8, 16],
                   price: 1.2,
                   category: "Nigiri",
-                  rating: 10,
+                  rating: 8,
                 },
                 {
                   id: 9,
@@ -116,7 +116,7 @@ export const api = {
                   sizes: [4, 8],
                   price: 2.1,
                   category: "Nigiri",
-                  rating: 7,
+                  rating: 6,
                 },
               ],
             });
@@ -147,7 +147,7 @@ export const api = {
                   sizes: [4, 8],
                   price: 2.3,
                   category: "Yaki maki",
-                  rating: 6,
+                  rating: 7,
                 },
               ],
             });
@@ -167,7 +167,7 @@ export const api = {
                   sizes: [1, 4, 8],
                   price: 14.99,
                   category: "Futomaki",
-                  rating: 4,
+                  rating: 10,
                 },
                 {
                   id: 3,
@@ -198,7 +198,7 @@ export const api = {
                   sizes: [4, 8],
                   price: 6,
                   category: "Maki",
-                  rating: 8,
+                  rating: 9,
                 },
                 {
                   id: 5,
@@ -240,7 +240,7 @@ export const api = {
                   sizes: [4, 8, 16],
                   price: 1.5,
                   category: "Grand maki",
-                  rating: 10,
+                  rating: 8,
                 }
               ],
             });
@@ -261,7 +261,7 @@ export const api = {
                   sizes: [4, 8, 16],
                   price: 1.2,
                   category: "Nigiri",
-                  rating: 10,
+                  rating: 8,
                 },
                 {
                   id: 9,
@@ -273,7 +273,7 @@ export const api = {
                   sizes: [4, 8],
                   price: 2.1,
                   category: "Nigiri",
-                  rating: 7,
+                  rating: 6,
                 }
               ],
             });
