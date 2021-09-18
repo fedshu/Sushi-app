@@ -22,7 +22,7 @@ const sushiTypes = [
   { label: "Nigiri", apiName: "nigiri" },
 ];
 
-const sortTypes = ["popular", "price", "alphabetically"];
+const sortTypes = ["popular", "price"];
 
 export const Home = () => {
   const dispatch = useDispatch();
