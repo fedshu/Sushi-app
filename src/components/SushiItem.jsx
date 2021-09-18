@@ -56,6 +56,7 @@ export default function SushiItem({ name, imageUrl, price, sizes }) {
 }
 
 SushiItem.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
@@ -63,6 +64,7 @@ SushiItem.propTypes = {
 };
 
 SushiItem.defaultProps = {
+  id: 0,
   name: "No name",
   imageUrl: "No picture",
   price: 0,
