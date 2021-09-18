@@ -1,4 +1,4 @@
-import { SET_TOTAL_COUNT, SET_TOTAL_PRICE } from "../actions";
+import { ADD_SUSHI } from "../actions";
 
 const initialState = {
   items: {},
@@ -8,18 +8,24 @@ const initialState = {
 
 export const cart = (state = initialState, action) => {
   switch (action.type) {
-    case SET_TOTAL_PRICE: {
+    case ADD_SUSHI:
+      const stateItems = state.items[action.payload.id];
+      const updatedSushi = {
+        ...state.items,
+        [action.payload.id]: stateItems
+          ? [...stateItems, action.payload]
+          : [action.payload],
+      };
+      const sushiLength = Object.values(updatedSushi).flat();
+      // const sushiPrice = sushiLength.reduce((sum, obj) => obj.price + sum, 0);
+      const sushiPrice = state.totalPrice + action.payload.price;
+
       return {
         ...state,
-        totalPrice: action.payload
+        items: updatedSushi,
+        totalPrice: sushiPrice,
+        totalCount: sushiLength.length,
       };
-    }
-    case SET_TOTAL_COUNT: {
-      return {
-        ...state,
-        totalCount: action.payload
-      };
-    }
     default:
       return state;
   }
