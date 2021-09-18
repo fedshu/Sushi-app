@@ -22,10 +22,10 @@ export const setSushi = (sushi) => ({
 
 export const setLoading = () => ({ type: SET_LOADING });
 
-export const getSushi =
-  (type = "all") =>
-  (dispatch) => {
-    api
-      .get(`/sushi/${type}`)
-      .then((result) => dispatch(setSushi(result.sushi)));
-  };
+export const getSushi = (categoryType, sortType) => (dispatch) => {
+  api.get(`/sushi/${categoryType}`).then(({ sushi }) => {
+    const sort = sortType === "popular" ? "rating" : "price";
+    const sortedSushi = sushi.sort((a, b) => b[sort] - a[sort]);
+    dispatch(setSushi(sortedSushi));
+  });
+};
