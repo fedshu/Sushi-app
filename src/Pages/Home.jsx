@@ -31,14 +31,16 @@ export const Home = () => {
 
   useEffect(() => {
     dispatch(setLoading());
-    dispatch(getSushi(category));
+    dispatch(getSushi(category, sortBy));
   }, [category, sortBy]);
 
   const handleSelectCategory = (categoryType) => {
+    if (categoryType === category) return
     dispatch(setCategoryType(categoryType));
   };
 
   const handleSelectSort = (sortType) => {
+    if (sortType === sortBy) return
     dispatch(setSortType(sortType));
   };
 
