@@ -28,6 +28,7 @@ export const Home = () => {
   const dispatch = useDispatch();
   const { sushiList, isLoaded } = useSelector(({ sushi }) => sushi);
   const { category, sortBy } = useSelector(({ filter }) => filter);
+  const selectedSushiLength = useSelector(({ cart }) => cart.items);
 
   useEffect(() => {
     dispatch(setLoading());
@@ -56,7 +57,17 @@ export const Home = () => {
       <h2 className="content__title">All sushi</h2>
       <div className="content__items">
         {isLoaded
-          ? sushiList.map((item) => <SushiItem key={item.id} {...item} />)
+          ? sushiList.map((sushi) => (
+              <SushiItem
+                key={sushi.id}
+                numberSelectedSushi={
+                  selectedSushiLength[sushi.id]
+                    ? selectedSushiLength[sushi.id].length
+                    : 0
+                }
+                {...sushi}
+              />
+            ))
           : Array(4)
               .fill(0)
               .map((item, index) => <SushiBackgroundLoading key={index + 1} />)}
