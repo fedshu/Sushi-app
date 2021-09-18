@@ -4,6 +4,8 @@ export const SET_SORT_TYPE = "SET_SORT_TYPE";
 export const SET_CATEGORY_TYPE = "SET_CATEGORY_TYPE";
 export const SET_SUSHI = "SET_SUSHI";
 export const SET_LOADING = "SET_LOADING";
+export const SET_TOTAL_COUNT = "SET_TOTAL_PRICE";
+export const SET_TOTAL_PRICE = "SET_TOTAL_PRICE";
 
 export const setSortType = (type) => ({
   type: SET_SORT_TYPE,
