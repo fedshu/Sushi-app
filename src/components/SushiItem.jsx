@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Button } from "./Button";
 
 export default function SushiItem({ name, imageUrl, price, sizes }) {
   const [sushiSizeIndex, setSelectedSize] = useState(0);
@@ -33,7 +34,7 @@ export default function SushiItem({ name, imageUrl, price, sizes }) {
       </div>
       <div className="sushi-block__bottom">
         <div className="sushi-block__price">from {price} $</div>
-        <div className="button button--outline button--add">
+        <Button className="button--add" outline>
           <svg
             width="12"
             height="12"
@@ -48,7 +49,7 @@ export default function SushiItem({ name, imageUrl, price, sizes }) {
           </svg>
           <span>Add</span>
           <i>1</i>
-        </div>
+        </Button>
       </div>
     </div>
   );
