@@ -36,12 +36,12 @@ export const Home = () => {
   }, [category, sortBy]);
 
   const handleSelectCategory = (categoryType) => {
-    if (categoryType === category) return
+    if (categoryType === category) return;
     dispatch(setCategoryType(categoryType));
   };
 
   const handleSelectSort = (sortType) => {
-    if (sortType === sortBy) return
+    if (sortType === sortBy) return;
     dispatch(setSortType(sortType));
   };
 
