@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setLoading, getSushi } from "../redux/actions";
+import {
+  setLoading,
+  getSushi,
+  setCategoryType,
+  setSortType,
+} from "../redux/actions";
 import {
   Categories,
   SortMenu,
@@ -21,28 +26,21 @@ const sortTypes = ["popular", "price", "alphabetically"];
 
 export const Home = () => {
   const dispatch = useDispatch();
+  const { sushiList, isLoaded } = useSelector(({ sushi }) => sushi);
+  const { category, sortBy } = useSelector(({ filter }) => filter);
 
   useEffect(() => {
-    dispatch(getSushi());
-  }, []);
+    dispatch(setLoading());
+    dispatch(getSushi(category));
+  }, [category, sortBy]);
 
   const handleSelectCategory = (categoryType) => {
-    dispatch(setLoading());
-    dispatch(getSushi(categoryType));
+    dispatch(setCategoryType(categoryType));
   };
 
   const handleSelectSort = (sortType) => {
-    console.log("sortType", sortType);
-    // dispatch(setLoading());
-    // dispatch(getSushi(categoryType));
+    dispatch(setSortType(sortType));
   };
-
-  const { sushi, isLoaded } = useSelector(({ sushi }) => {
-    return {
-      sushi: sushi.sushiList,
-      isLoaded: sushi.isLoaded,
-    };
-  });
 
   return (
     <div className="container">
@@ -51,16 +49,13 @@ export const Home = () => {
           sushiTypes={sushiTypes}
           onSelectCategoryType={handleSelectCategory}
         />
-        <SortMenu
-          sortTypes={sortTypes}
-          onSelectSortType={handleSelectSort}
-        />
+        <SortMenu sortTypes={sortTypes} onSelectSortType={handleSelectSort} />
       </div>
       <h2 className="content__title">All sushi</h2>
       <div className="content__items">
         {isLoaded
-          ? sushi.map((item) => <SushiItem key={item.id} {...item} />)
-          : Array(8)
+          ? sushiList.map((item) => <SushiItem key={item.id} {...item} />)
+          : Array(4)
               .fill(0)
               .map((item, index) => <SushiBackgroundLoading key={index + 1} />)}
       </div>
