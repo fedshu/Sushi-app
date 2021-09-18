@@ -1,4 +1,4 @@
 import { Home } from "./Home";
-import { Card } from "./Card";
+import { Cart } from "./Cart";
 
-export { Card, Home };
+export { Cart, Home };
