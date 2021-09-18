@@ -1,9 +1,25 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { addSushi } from "../redux/actions";
 import { Button } from "./Button";
+import PropTypes from "prop-types";
 
-export default function SushiItem({ name, imageUrl, price, sizes }) {
+export default function SushiItem({ id, name, imageUrl, price, sizes, numberSelectedSushi }) {
   const [sushiSizeIndex, setSelectedSize] = useState(0);
+
+  const dispatch = useDispatch();
+
+  const handleAddSushi = () => {
+    dispatch(
+      addSushi({
+        id,
+        name,
+        price,
+        imageUrl,
+        size: sushiSizeIndex,
+      })
+    );
+  };
 
   return (
     <div className="sushi-block">
@@ -34,7 +50,7 @@ export default function SushiItem({ name, imageUrl, price, sizes }) {
       </div>
       <div className="sushi-block__bottom">
         <div className="sushi-block__price">from {price} $</div>
-        <Button className="button--add" outline>
+        <Button onClick={handleAddSushi} className="button--add" outline>
           <svg
             width="12"
             height="12"
@@ -48,7 +64,7 @@ export default function SushiItem({ name, imageUrl, price, sizes }) {
             />
           </svg>
           <span>Add</span>
-          <i>1</i>
+          <i>{numberSelectedSushi}</i>
         </Button>
       </div>
     </div>
