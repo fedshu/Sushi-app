@@ -1,7 +1,11 @@
 import React from "react";
 import { CartItem } from "../components";
+import { useSelector } from "react-redux";
 
 export const Cart = () => {
+  const { selectedSushi, totalPrice, totalCount } = useSelector(
+    ({ cart }) => cart
+  );
   return (
     <div className="container container--cart">
       <div className="cart">
@@ -36,7 +40,7 @@ export const Cart = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            Корзина
+            Cart
           </h2>
           <div className="cart__clear">
             <svg
@@ -76,25 +80,35 @@ export const Cart = () => {
               />
             </svg>
 
-            <span>Очистить корзину</span>
+            <span>Clear</span>
           </div>
         </div>
         <div className="content-card__items">
-        <CartItem />
+          {selectedSushi &&
+            selectedSushi.map((sushi, index) => (
+              <CartItem
+                name={sushi.name}
+                type={sushi.type}
+                sushiCount={sushi.sizeCount}
+                totalPrice={sushi.totalPrice}
+                key={sushi.id + index}
+              />
+            ))}
         </div>
         <div className="cart__bottom">
           <div className="cart__bottom-details">
             <span>
-              {" "}
-              Всего пицц: <b>3 шт.</b>{" "}
+              Items: <b>{totalCount}</b>
             </span>
             <span>
-              {" "}
-              Сумма заказа: <b>900 ₽</b>{" "}
+              Subtotal: <b>{totalPrice} $</b>
             </span>
           </div>
           <div className="cart__bottom-buttons">
-            <a href="/" className="button button--outline button--add go-back-btn">
+            <a
+              href="/"
+              className="button button--outline button--add go-back-btn"
+            >
               <svg
                 width="8"
                 height="14"
@@ -111,10 +125,10 @@ export const Cart = () => {
                 />
               </svg>
 
-              <span>Вернуться назад</span>
+              <span>Go back</span>
             </a>
             <div className="button pay-btn">
-              <span>Оплатить сейчас</span>
+              <span>Buy</span>
             </div>
           </div>
         </div>
