@@ -17,6 +17,7 @@ export default function SushiItem({ id, name, imageUrl, price, sizes, numberSele
         price,
         imageUrl,
         size: sushiSizeIndex,
+        type: sizes[sushiSizeIndex]
       })
     );
   };
