@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../asserts/img/sushi-logo.svg";
 import { useSelector } from "react-redux";
-import { Button } from "./Button";
+import Button from "./Button";
 
-export const Header = () => {
+export default function Header() {
   const { totalPrice, totalCount } = useSelector(({ cart }) => cart);
 
   return (

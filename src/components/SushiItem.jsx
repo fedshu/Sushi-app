@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addSushi } from "../redux/actions";
-import { Button } from "./Button";
+import Button from "./Button";
 import PropTypes from "prop-types";
 
 export default function SushiItem({ id, name, imageUrl, price, sizes, numberSelectedSushi }) {

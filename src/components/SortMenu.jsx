@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
 import PropTypes from 'prop-types'
 
-export const SortMenu = ({ sortTypes, onSelectSortType }) => {
+export default function SortMenu({ sortTypes, onSelectSortType }) {
   const [isOpenMenu, toggleOpenMenu] = useState(false);
   const [sortTypeIndex, setSelectedSortType] = useState(0);
   const sortElement = useRef();
