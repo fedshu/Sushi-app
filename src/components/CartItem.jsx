@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CartItem() {
+export default function CartItem({ name, type, sushiCount, totalPrice }) {
   return (
     <div className="cart__item">
       <div className="cart__item-img">
@@ -11,8 +11,8 @@ export default function CartItem() {
         />
       </div>
       <div className="cart__item-info">
-        <h3>Сырный цыпленок</h3>
-        <p>тонкое тесто, 26 см.</p>
+        <h3>{name}</h3>
+        <p>{type}x</p>
       </div>
       <div className="cart__item-count">
         <div className="button button--outline button--circle cart__item-count-minus">
@@ -33,7 +33,7 @@ export default function CartItem() {
             />
           </svg>
         </div>
-        <b>2</b>
+        <b>{sushiCount}</b>
         <div className="button button--outline button--circle cart__item-count-plus">
           <svg
             width="10"
@@ -54,7 +54,7 @@ export default function CartItem() {
         </div>
       </div>
       <div className="cart__item-price">
-        <b>770 ₽</b>
+        <b>{totalPrice} $</b>
       </div>
       <div className="cart__item-remove">
         <div className="button button--outline button--circle">
