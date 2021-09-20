@@ -114,7 +114,7 @@ export const Cart = () => {
               </span>
             </div>
             <div className="cart__bottom-buttons">
-              <Link to="/">
+              <Link to="Sushi-app/">
                 <Button className="button--add go-back-btn" outline>
                   <svg
                     width="8"
@@ -135,7 +135,7 @@ export const Cart = () => {
                   <span>Go back</span>
                 </Button>
               </Link>
-              <Link to="/">
+              <Link to="Sushi-app/">
                 <Button onClick={handleClearCart} className="pay-btn">
                   <span>Buy</span>
                 </Button>
@@ -147,7 +147,7 @@ export const Cart = () => {
         <div className="cart cart--empty">
           <h2>Cart is empty :(</h2>
           <img src={emptyCart} alt="Empty cart" />
-          <Link to="/">
+          <Link to="Sushi-app/">
             <Button className="button--black">
               <svg
                 width="8"

@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <div className="header">
       <div className="container">
-        <Link to="/">
+        <Link to="Sushi-app/">
           <div className="header__logo">
             <img width="38" src={logo} alt="Pizza logo" />
             <div>
@@ -20,7 +20,7 @@ export default function Header() {
           </div>
         </Link>
         <div className="header__cart">
-          <Link to="/cart">
+          <Link to="Sushi-app/cart">
             <Button className="button--cart">
               <span>{totalPrice} $</span>
               <div className="button__delimiter"></div>
