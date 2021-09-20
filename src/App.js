@@ -9,8 +9,8 @@ function App() {
     <div className="wrapper">
       <Header />
       <div className="content">
-        <Route exact path="Sushi-app/" component={Home} />
-        <Route exact path="Sushi-app/cart" component={Cart} />
+        <Route exact path="https://fedshu.github.io/Sushi-app/" component={Home} />
+        <Route exact path="https://fedshu.github.io/Sushi-app/cart" component={Cart} />
       </div>
     </div>
   );
