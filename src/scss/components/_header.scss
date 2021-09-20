@@ -32,6 +32,9 @@
 }
 
 @media (max-width: 480px) {
+  .header {
+    padding: 1rem 0;
+  }
   .header__logo p {
     display: none;
   }
