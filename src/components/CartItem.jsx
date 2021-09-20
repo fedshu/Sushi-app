@@ -1,12 +1,28 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { removeSushiBundle, addOneSushi, removeOneSushi } from "../redux/actions";
+import Button from "./Button";
 
-export default function CartItem({ name, type, sushiCount, totalPrice }) {
+export default function CartItem({ id, name, type, price, size, imageUrl, sushiCount, totalPrice }) {
+  const dispatch = useDispatch()
+  const handleRemoveSushiBundle = () => {
+    dispatch(removeSushiBundle({id, type}))
+  }
+
+  const handleAddIOneSushi = () => {
+    dispatch(addOneSushi({id, type, size, price}))
+  }
+
+  const handleRemoveIOneSushi = () => {
+    dispatch(removeOneSushi({id, type, size, price}))
+  }
+  
   return (
     <div className="cart__item">
       <div className="cart__item-img">
         <img
           className="pizza-block__image"
-          src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+          src={imageUrl}
           alt="Pizza"
         />
       </div>
@@ -15,7 +31,7 @@ export default function CartItem({ name, type, sushiCount, totalPrice }) {
         <p>{type}x</p>
       </div>
       <div className="cart__item-count">
-        <div className="button button--outline button--circle cart__item-count-minus">
+        <Button onClick={handleRemoveIOneSushi} className="button--circle cart__item-count-minus" outline>
           <svg
             width="10"
             height="10"
@@ -32,9 +48,9 @@ export default function CartItem({ name, type, sushiCount, totalPrice }) {
               fill="#EB5A1E"
             />
           </svg>
-        </div>
+        </Button>
         <b>{sushiCount}</b>
-        <div className="button button--outline button--circle cart__item-count-plus">
+        <Button onClick={handleAddIOneSushi} className="button--circle cart__item-count-plus" outline>
           <svg
             width="10"
             height="10"
@@ -51,13 +67,13 @@ export default function CartItem({ name, type, sushiCount, totalPrice }) {
               fill="#EB5A1E"
             />
           </svg>
-        </div>
+        </Button>
       </div>
       <div className="cart__item-price">
         <b>{totalPrice} $</b>
       </div>
       <div className="cart__item-remove">
-        <div className="button button--outline button--circle">
+        <Button onClick={handleRemoveSushiBundle} className="button--circle" outline>
           <svg
             width="10"
             height="10"
@@ -74,7 +90,7 @@ export default function CartItem({ name, type, sushiCount, totalPrice }) {
               fill="#EB5A1E"
             />
           </svg>
-        </div>
+        </Button>
       </div>
     </div>
   );
