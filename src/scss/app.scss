@@ -34,7 +34,7 @@ body {
 
   &__top {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
     flex-wrap: wrap;
   }
@@ -111,6 +111,7 @@ body {
 
   &__item {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     border-top: 1px solid $gray-line;
     padding-top: 30px;
@@ -120,7 +121,6 @@ body {
       display: flex;
       align-items: center;
       margin-right: 15px;
-      width: 10%;
 
       img {
         width: 80px;
@@ -128,11 +128,16 @@ body {
       }
     }
 
+    &-container {
+      display: flex;
+      width: 40%;
+      justify-content: left;
+    }
+
     &-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 40%;
 
       h3 {
         font-weight: bold;
@@ -151,7 +156,10 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 13%;
+
+      &-number {
+        margin: 0 0.55rem;
+      }
 
       &-minus {
         svg {
@@ -170,7 +178,6 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 33%;
 
       b {
         font-weight: bold;
@@ -183,7 +190,6 @@ body {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 4%;
 
       .button {
         border-color: darken($color: $gray-line, $amount: 10);
@@ -234,13 +240,14 @@ body {
       display: flex;
       justify-content: space-between;
       margin-top: 40px;
+      flex-wrap: wrap;
 
       .go-back-btn {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 210px;
-
+        margin-bottom: 10px;
         border-color: darken($color: $gray-line, $amount: 10);
 
         span {
@@ -280,7 +287,6 @@ body {
 
   &--empty {
     margin: 0 auto;
-    width: 560px;
     text-align: center;
 
     h2 {

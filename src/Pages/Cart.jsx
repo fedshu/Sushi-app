@@ -135,9 +135,11 @@ export const Cart = () => {
                   <span>Go back</span>
                 </Button>
               </Link>
-              <Button className="pay-btn">
-                <span>Buy</span>
-              </Button>
+              <Link to="/">
+                <Button onClick={handleClearCart} className="pay-btn">
+                  <span>Buy</span>
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

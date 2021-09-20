@@ -1,37 +1,52 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removeSushiBundle, addOneSushi, removeOneSushi } from "../redux/actions";
+import {
+  removeSushiBundle,
+  addOneSushi,
+  removeOneSushi,
+} from "../redux/actions";
 import Button from "./Button";
 
-export default function CartItem({ id, name, type, price, size, imageUrl, sushiCount, totalPrice }) {
-  const dispatch = useDispatch()
+export default function CartItem({
+  id,
+  name,
+  type,
+  price,
+  size,
+  imageUrl,
+  sushiCount,
+  totalPrice,
+}) {
+  const dispatch = useDispatch();
   const handleRemoveSushiBundle = () => {
-    dispatch(removeSushiBundle({id, type}))
-  }
+    dispatch(removeSushiBundle({ id, type }));
+  };
 
   const handleAddIOneSushi = () => {
-    dispatch(addOneSushi({id, type, size, price}))
-  }
+    dispatch(addOneSushi({ id, type, size, price }));
+  };
 
   const handleRemoveIOneSushi = () => {
-    dispatch(removeOneSushi({id, type, size, price}))
-  }
-  
+    dispatch(removeOneSushi({ id, type, size, price }));
+  };
+
   return (
     <div className="cart__item">
-      <div className="cart__item-img">
-        <img
-          className="pizza-block__image"
-          src={imageUrl}
-          alt="Pizza"
-        />
-      </div>
-      <div className="cart__item-info">
-        <h3>{name}</h3>
-        <p>{type}x</p>
+      <div className="cart__item-container">
+        <div className="cart__item-img">
+          <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
+        </div>
+        <div className="cart__item-info">
+          <h3>{name}</h3>
+          <p>{type}x</p>
+        </div>
       </div>
       <div className="cart__item-count">
-        <Button onClick={handleRemoveIOneSushi} className="button--circle cart__item-count-minus" outline>
+        <Button
+          onClick={handleRemoveIOneSushi}
+          className="button--circle cart__item-count-minus"
+          outline
+        >
           <svg
             width="10"
             height="10"
@@ -49,8 +64,12 @@ export default function CartItem({ id, name, type, price, size, imageUrl, sushiC
             />
           </svg>
         </Button>
-        <b>{sushiCount}</b>
-        <Button onClick={handleAddIOneSushi} className="button--circle cart__item-count-plus" outline>
+        <b className="cart__item-count-number">{sushiCount}</b>
+        <Button
+          onClick={handleAddIOneSushi}
+          className="button--circle cart__item-count-plus"
+          outline
+        >
           <svg
             width="10"
             height="10"
@@ -73,7 +92,11 @@ export default function CartItem({ id, name, type, price, size, imageUrl, sushiC
         <b>{totalPrice} $</b>
       </div>
       <div className="cart__item-remove">
-        <Button onClick={handleRemoveSushiBundle} className="button--circle" outline>
+        <Button
+          onClick={handleRemoveSushiBundle}
+          className="button--circle"
+          outline
+        >
           <svg
             width="10"
             height="10"
