@@ -48,7 +48,13 @@
 
   &--black {
     background-color: $black;
+    display: flex;
+    justify-content: center;
 
+    svg {
+      margin-right: 12px;
+    }
+    
     &:hover,
     &:active {
       background-color: lighten($color: $black, $amount: 10);
