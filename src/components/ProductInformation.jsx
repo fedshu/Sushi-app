@@ -53,8 +53,31 @@ export default function ProductInfomation({ children }) {
         BackdropComponent={Backdrop}
       >
         <Box sx={style}>
-          <h2 id="unstyled-modal-title">Text in a modal</h2>
-          <p id="unstyled-modal-description">Aliquid amet deserunt earum!</p>
+          <h3 className="modal-window__title" id="unstyled-modal-title">Product information</h3>
+          <div className="modal-window__content">
+            <div>
+              <img width="115" height="115" src={props.imageUrl} alt="Sushi" />
+            </div>
+            <div>
+              <h2>{props.name}</h2>
+              <p>
+                <b>Weight:</b> {props.weight} g
+              </p>
+              <p>
+                <b>Proteins:</b> {props.proteins} g
+              </p>
+              <p>
+                <b>Fats:</b> {props.fats} g
+              </p>
+              <p>
+                <b>Carbohydrates:</b> {props.carbohydrates} g
+              </p>
+              <p>
+                <b>Calories:</b> {props.calories} g
+              </p>
+              <h3>from {props.price}$</h3>
+            </div>
+          </div>
         </Box>
       </StyledModal>
     </div>
