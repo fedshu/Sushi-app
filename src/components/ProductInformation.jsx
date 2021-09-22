@@ -28,14 +28,11 @@ const Backdrop = styled("div")`
 const style = {
   width: 400,
   bgcolor: "#ffffff",
-  borderRadius: '.25rem',
-  boxShadow: '0 10px 15px -3px rgb(0 0 0 / 7%), 0 4px 6px -2px rgb(0 0 0 / 5%)',
-  p: 2,
-  px: 4,
-  pb: 3,
+  borderRadius: ".25rem",
+  boxShadow: "0 10px 15px -3px rgb(0 0 0 / 7%), 0 4px 6px -2px rgb(0 0 0 / 5%)"
 };
 
-export default function ProductInfomation({ children }) {
+export default function ProductInfomation(props) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -43,7 +40,7 @@ export default function ProductInfomation({ children }) {
   return (
     <div className="modal-window">
       <div className="modal-window__button" onClick={handleOpen}>
-        {children}
+        {props.children}
       </div>
       <StyledModal
         aria-labelledby="unstyled-modal-title"
