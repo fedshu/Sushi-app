@@ -3,8 +3,16 @@ import { useDispatch } from "react-redux";
 import { addSushi } from "../redux/actions";
 import Button from "./Button";
 import PropTypes from "prop-types";
+import ProductInformation from "./ProductInformation";
 
-export default function SushiItem({ id, name, imageUrl, price, sizes, numberSelectedSushi }) {
+export default function SushiItem({
+  id,
+  name,
+  imageUrl,
+  price,
+  sizes,
+  numberSelectedSushi,
+}) {
   const [sushiSizeIndex, setSelectedSize] = useState(0);
 
   const dispatch = useDispatch();
@@ -17,7 +25,7 @@ export default function SushiItem({ id, name, imageUrl, price, sizes, numberSele
         price,
         imageUrl,
         size: sushiSizeIndex,
-        type: sizes[sushiSizeIndex]
+        type: sizes[sushiSizeIndex],
       })
     );
   };
@@ -35,7 +43,9 @@ export default function SushiItem({ id, name, imageUrl, price, sizes, numberSele
       <h4 className="sushi-block__title">{name}</h4>
       <div className="sushi-block__selector">
         <ul>
-          <li className="info">Product Information</li>
+          <ProductInformation>
+            <li className="info">Product Information</li>
+          </ProductInformation>
         </ul>
         <ul>
           {sizes?.map((size, index) => (
