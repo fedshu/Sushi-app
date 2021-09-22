@@ -374,6 +374,9 @@ body {
   .container--cart {
     margin: 0.5rem auto;
   }
+  .modal-window-image {
+    display: none;
+  }
 }
 
 @media (max-width: 566px) {
