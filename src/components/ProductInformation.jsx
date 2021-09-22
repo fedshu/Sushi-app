@@ -29,6 +29,7 @@ const style = {
   width: 400,
   bgcolor: "#ffffff",
   borderRadius: ".25rem",
+  m: 1,
   boxShadow: "0 10px 15px -3px rgb(0 0 0 / 7%), 0 4px 6px -2px rgb(0 0 0 / 5%)"
 };
 
@@ -52,7 +53,7 @@ export default function ProductInfomation(props) {
         <Box sx={style}>
           <h3 className="modal-window__title" id="unstyled-modal-title">Product information</h3>
           <div className="modal-window__content">
-            <div>
+            <div className="modal-window-image">
               <img width="115" height="115" src={props.imageUrl} alt="Sushi" />
             </div>
             <div>
