@@ -5,6 +5,7 @@ import Categories from "./Categories";
 import SortMenu from "./SortMenu";
 import Button from "./Button";
 import SushiBackgroundLoading from "./SushiBackgroundLoading";
+import ProductInfomation from "./ProductInformation";
 
 export {
   Button,
@@ -14,4 +15,5 @@ export {
   SushiItem,
   CartItem,
   SushiBackgroundLoading,
+  ProductInfomation,
 };
