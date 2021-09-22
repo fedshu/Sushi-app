@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Sushi-app/static/css/main.775dc6c6.chunk.css",
+    "main.css": "/Sushi-app/static/css/main.0155f9c5.chunk.css",
     "main.js": "/Sushi-app/static/js/main.686ced89.chunk.js",
     "main.js.map": "/Sushi-app/static/js/main.686ced89.chunk.js.map",
     "runtime-main.js": "/Sushi-app/static/js/runtime-main.7cb846aa.js",
@@ -8,7 +8,7 @@
     "static/js/2.831bfbaf.chunk.js": "/Sushi-app/static/js/2.831bfbaf.chunk.js",
     "static/js/2.831bfbaf.chunk.js.map": "/Sushi-app/static/js/2.831bfbaf.chunk.js.map",
     "index.html": "/Sushi-app/index.html",
-    "static/css/main.775dc6c6.chunk.css.map": "/Sushi-app/static/css/main.775dc6c6.chunk.css.map",
+    "static/css/main.0155f9c5.chunk.css.map": "/Sushi-app/static/css/main.0155f9c5.chunk.css.map",
     "static/js/2.831bfbaf.chunk.js.LICENSE.txt": "/Sushi-app/static/js/2.831bfbaf.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/Sushi-app/static/media/ProximaNova-Regular.d97f8f32.eot",
     "static/media/empty-cart.db905d1f.png": "/Sushi-app/static/media/empty-cart.db905d1f.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.7cb846aa.js",
     "static/js/2.831bfbaf.chunk.js",
-    "static/css/main.775dc6c6.chunk.css",
+    "static/css/main.0155f9c5.chunk.css",
     "static/js/main.686ced89.chunk.js"
   ]
 }
