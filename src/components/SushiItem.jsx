@@ -43,7 +43,16 @@ export default function SushiItem({
       <h4 className="sushi-block__title">{name}</h4>
       <div className="sushi-block__selector">
         <ul>
-          <ProductInformation>
+          <ProductInformation
+            name={name}
+            imageUrl={imageUrl}
+            price={price}
+            weight={"33g"}
+            proteins={"6.30"}
+            fats={"3.80"}
+            carbohydrates={"42.90"}
+            calories={"220.80"}
+          >
             <li className="info">Product Information</li>
           </ProductInformation>
         </ul>
