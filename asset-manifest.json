@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Sushi-app/static/css/main.d777e87d.chunk.css",
-    "main.js": "/Sushi-app/static/js/main.234fd6b2.chunk.js",
-    "main.js.map": "/Sushi-app/static/js/main.234fd6b2.chunk.js.map",
+    "main.css": "/Sushi-app/static/css/main.775dc6c6.chunk.css",
+    "main.js": "/Sushi-app/static/js/main.686ced89.chunk.js",
+    "main.js.map": "/Sushi-app/static/js/main.686ced89.chunk.js.map",
     "runtime-main.js": "/Sushi-app/static/js/runtime-main.7cb846aa.js",
     "runtime-main.js.map": "/Sushi-app/static/js/runtime-main.7cb846aa.js.map",
-    "static/js/2.713b1ff8.chunk.js": "/Sushi-app/static/js/2.713b1ff8.chunk.js",
-    "static/js/2.713b1ff8.chunk.js.map": "/Sushi-app/static/js/2.713b1ff8.chunk.js.map",
+    "static/js/2.831bfbaf.chunk.js": "/Sushi-app/static/js/2.831bfbaf.chunk.js",
+    "static/js/2.831bfbaf.chunk.js.map": "/Sushi-app/static/js/2.831bfbaf.chunk.js.map",
     "index.html": "/Sushi-app/index.html",
-    "static/css/main.d777e87d.chunk.css.map": "/Sushi-app/static/css/main.d777e87d.chunk.css.map",
-    "static/js/2.713b1ff8.chunk.js.LICENSE.txt": "/Sushi-app/static/js/2.713b1ff8.chunk.js.LICENSE.txt",
+    "static/css/main.775dc6c6.chunk.css.map": "/Sushi-app/static/css/main.775dc6c6.chunk.css.map",
+    "static/js/2.831bfbaf.chunk.js.LICENSE.txt": "/Sushi-app/static/js/2.831bfbaf.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/Sushi-app/static/media/ProximaNova-Regular.d97f8f32.eot",
     "static/media/empty-cart.db905d1f.png": "/Sushi-app/static/media/empty-cart.db905d1f.png",
     "static/media/sushi-logo.b5786b9e.svg": "/Sushi-app/static/media/sushi-logo.b5786b9e.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.7cb846aa.js",
-    "static/js/2.713b1ff8.chunk.js",
-    "static/css/main.d777e87d.chunk.css",
-    "static/js/main.234fd6b2.chunk.js"
+    "static/js/2.831bfbaf.chunk.js",
+    "static/css/main.775dc6c6.chunk.css",
+    "static/js/main.686ced89.chunk.js"
   ]
 }
