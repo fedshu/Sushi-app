@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../asserts/img/sushi-logo.svg";
 import { useSelector } from "react-redux";
+import logo from "../asserts/img/sushi-logo.svg";
 import Button from "./Button";
 
 export default function Header() {
