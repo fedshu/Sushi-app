@@ -322,6 +322,38 @@ body {
     }
   }
 }
+
+
+.modal-window {
+  width: 100%;
+  
+  &__title {
+    padding: 1rem;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  &__button {
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+
+    h2 {
+      padding: 0 0 1rem 0;
+    }
+
+    h3 {
+      padding: 1rem 0 0 0;
+    }
+
+    div {
+      padding: 1rem; 
+    }
+  }
+}
+
+
 @media (max-width: 480px) {
   .wrapper {
     width: calc(100vw - 20px);
